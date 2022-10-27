@@ -1,0 +1,30 @@
+{
+  "name": "json2gql",
+  "version": "0.0.1",
+  "description": "No dependency utility for converting json objects into graphql query strings",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitest",
+    "test": "vitest run",
+    "build": "tsc"
+  },
+  "keywords": [
+    "graphql",
+    "json",
+    "typescript",
+    "converter",
+    "sforman"
+  ],
+  "author": "Sebastian Forman <sebastian@forman.no>",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4",
+    "vitest": "^0.24.3"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "printWidth": 120,
+    "trailingComma": "none"
+  }
+}
