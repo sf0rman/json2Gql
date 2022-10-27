@@ -2,7 +2,14 @@
   "name": "json2gql",
   "version": "0.0.1",
   "description": "No dependency utility for converting json objects into graphql query strings",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sf0rman/json2Gql.git"
+  },
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "dev": "vitest",
     "test": "vitest run",
