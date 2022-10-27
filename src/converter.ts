@@ -31,7 +31,6 @@ export const json2Gql = (input: unknown) => {
 
   Object.keys(input).forEach((key: string) => {
     keys.push(key);
-    console.log("input", key, typeof input[key], input[key]);
 
     if (!Array.isArray(input[key]) && typeof input[key] === "object" && input[key] !== null) {
       const children = json2Gql(input[key]);

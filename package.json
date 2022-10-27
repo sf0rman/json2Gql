@@ -18,9 +18,7 @@
   "keywords": [
     "graphql",
     "json",
-    "typescript",
-    "converter",
-    "sforman"
+    "converter"
   ],
   "author": "Sebastian Forman <sebastian@forman.no>",
   "license": "ISC",
