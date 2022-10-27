@@ -1,5 +1,5 @@
 {
-  "name": "json2gql",
+  "name": "json-2-graphql",
   "version": "0.0.1",
   "description": "No dependency utility for converting json objects into graphql query strings",
   "main": "lib/index.js",
