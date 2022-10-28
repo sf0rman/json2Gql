@@ -24,7 +24,12 @@ export const combineAllArrayObjects = (arr: any[]): any => {
   return obj;
 };
 
-export const json2Gql = (input: unknown) => {
+/**
+ * @param input javascript object to be converted
+ * @returns string representation of graphql query
+ */
+export const json2Gql = (input: unknown, top = true) => {
+  if (!top && typeof input === "object" && input.constructor.name !== "Object") return "";
   if (!isJSON(input)) throw new InvalidTypeError("Cannot convert non-JSON format");
 
   const keys: string[] = [];
@@ -33,15 +38,15 @@ export const json2Gql = (input: unknown) => {
     keys.push(key);
 
     if (!Array.isArray(input[key]) && typeof input[key] === "object" && input[key] !== null) {
-      const children = json2Gql(input[key]);
+      const children = json2Gql(input[key], false);
       keys.push(children);
     }
 
     if (Array.isArray(input[key]) && typeof input[key][0] === "object") {
-      const children = json2Gql(combineAllArrayObjects(input[key]));
+      const children = json2Gql(combineAllArrayObjects(input[key]), false);
       keys.push(children);
     }
   });
 
-  return `{ ${keys.join(" ")} }`;
+  return `{ ${keys.join(" ")} }`.replace(/\s\s/g, " ");
 };

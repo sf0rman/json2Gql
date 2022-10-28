@@ -102,4 +102,12 @@ describe(".json2Gql converts", () => {
       })
     ).toEqual("{ prop1 arr { arrProp1 arrProp2 extraProp } }");
   });
+
+  it("JSON with Arrays and other Objects", () => {
+    expect(json2Gql({
+      prop1: "1",
+      dateField: new Date("2022-10-28"),
+      errorObj: new Error("Error"),
+    })).toEqual("{ prop1 dateField errorObj }")
+  })
 });
