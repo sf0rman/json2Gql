@@ -5,7 +5,10 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sf0rman/json2Gql.git"
+    "url": "git+https://github.com/sf0rman/json2Gql.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sf0rman/json2Gql/issues"
   },
   "files": [
     "lib"

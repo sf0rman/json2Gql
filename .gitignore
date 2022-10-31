@@ -1,2 +1,5 @@
+.DS_Store
 node_modules
 lib
+json-2-graphql-**.tgz
+.npmrc
