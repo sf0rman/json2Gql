@@ -3,7 +3,7 @@ This is a simple, zero dependency, utility that takes a javascript object and tu
 
 ## Installation
 ```
-npm i json2gql
+npm i json-2-graphql-query
 ```
 
 ## Usage
